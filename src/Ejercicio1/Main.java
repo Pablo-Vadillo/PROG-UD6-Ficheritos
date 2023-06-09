@@ -1,10 +1,14 @@
 package Ejercicio1;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.FileWriter;
+
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-
+        FileWriter fw = new FileWriter("src/Ejercicio1/Actividad1Fichero.txt");
         String text="";
 
         while (text.length()<=30 ) {
@@ -14,11 +18,13 @@ public class Main {
                 text = text.replace(" ","_");
                 text = text.toUpperCase();
 
-            if(text.length()<=30){
+            if (text.length()<=30){
                 System.out.println("Character remain to complete the text: " + (30 - text.length()));
+            } else {
+                System.out.println(text);
+                fw.write(text);
             }
-
         }
-        System.out.println("Text: " + text);
+        fw.close();
     }
 }
