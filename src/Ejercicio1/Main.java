@@ -5,30 +5,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String userName="";
-        String password="";
+        String text="";
 
-        while (password.length()<=30 ) {
-            System.out.println("Enter username: ");
-            userName = scanner.next();
-            System.out.println("Enter password: ");
-            password = scanner.next();
+        while (text.length()<=30 ) {
+            System.out.println("Enter text: ");
+            text = scanner.next();
 
-            if(password.length()<=30){
-                System.out.println("Character remain to complete the password: " + (30 - password.length()) );
+            if(text.length()<=30){
+                System.out.println("Character remain to complete the text: " + (30 - text.length()) );
             }
 
         }
 
         System.out.println("User: "+ userName);
         System.out.println("Password: " + password);
-
-
-
-
-
-
-
-
     }
 }
