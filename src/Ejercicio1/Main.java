@@ -9,15 +9,16 @@ public class Main {
 
         while (text.length()<=30 ) {
             System.out.println("Enter text: ");
-            text = scanner.next();
+            text = scanner.nextLine();
+
+                text = text.replace(" ","_");
+                text = text.toUpperCase();
 
             if(text.length()<=30){
-                System.out.println("Character remain to complete the text: " + (30 - text.length()) );
+                System.out.println("Character remain to complete the text: " + (30 - text.length()));
             }
 
         }
-
-        System.out.println("User: "+ userName);
-        System.out.println("Password: " + password);
+        System.out.println("Text: " + text);
     }
 }
