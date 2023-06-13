@@ -2,10 +2,10 @@ package Ejercicio1;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.FileWriter;
-public class Main {
+public class Actividad1 {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        FileWriter fw = new FileWriter("src/Ejercicio1/Actividad1Fichero.txt");
+        FileWriter fw = new FileWriter("src/Ejercicio1/Actividad1.txt");
         String text="";
 
         while (text.length()<=30 ) {
